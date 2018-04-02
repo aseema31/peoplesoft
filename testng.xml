@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="PeopleSoft voucher creation">
+<test name="createVoucher">
+<parameter name="driverpath" value="C:\Girish_Demo\chromedriver.exe"/>
+<parameter name="path" value="C:\Girish_Demo\"/>
+<classes>
+<class name= "test.java.com.peoplesoft.container.test.PeopleSoftTest"/>
+</classes>
+</test>
+</suite>
