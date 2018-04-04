@@ -3,8 +3,7 @@
 
 <suite name="PeopleSoft voucher creation">
 <test name="createVoucher">
-<parameter name="driverpath" value="C:\Girish_Demo\chromedriver.exe"/>
-<parameter name="path" value="C:\Girish_Demo\"/>
+<parameter name="driverpath" value="/home/seema/eclipse-workspace/peoplesoft/chromedriver"/>
 <classes>
 <class name= "test.java.com.peoplesoft.container.test.PeopleSoftTest"/>
 </classes>

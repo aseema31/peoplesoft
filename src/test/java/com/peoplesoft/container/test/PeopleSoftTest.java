@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -33,13 +34,16 @@ public class PeopleSoftTest {
 		
 
 	}
-	@Parameters({"path","driverpath"})
+	@Parameters({"driverpath"})
 	@BeforeTest
-	public void setPath(String path,String driverpath)
+	public void setPath(String driverpath)
 	{
-		this.path = path;
+		System.out.println(driverpath);
+		
 		System.setProperty("webdriver.chrome.driver",driverpath);
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get(ApplicationConstants.APPLICATION_URL);
 	}

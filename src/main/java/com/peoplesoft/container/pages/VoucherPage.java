@@ -9,9 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Screen;
 
 import main.java.com.peoplesoft.container.bean.VoucherBean;
 import main.java.com.peoplesoft.container.resources.ApplicationConstants;
@@ -117,15 +114,15 @@ public class VoucherPage extends IPage{
 	private void alertAction(String path) {
 		
 //		System.setProperty("", value)();
-		Screen s = new Screen();
+		/*Screen s = new Screen();
 		Pattern p = new Pattern(path+"\\alertok.PNG");
 		try {
 			s.find(p);
 			s.click(p);
 		} catch (FindFailed e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			e.printStackTrace();*/
+//		}
 	
 		boolean a = false;
 /*		    try {
