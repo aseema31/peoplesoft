@@ -28,7 +28,7 @@ pipeline {
               rm -rf test-output/
               rm -rf screenshots/
               rm Test_Execution_Report.html
-              docker run --env SELENIUM_HUB=192.168.1.129 --name container-test aseema31/infoloblabs:latest || error=true
+              docker run --env SELENIUM_HUB=172.18.0.1 --name container-test aseema31/infoloblabs:latest || error=true
               docker cp container-test:/usr/share/tag/test-output/ .
               docker cp container-test:/Test_Execution_Report.html .
               docker cp container-test:/screenshots/ .
