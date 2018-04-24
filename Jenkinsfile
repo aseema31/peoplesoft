@@ -30,7 +30,7 @@ pipeline {
               rm Test_Execution_Report.html
               docker run --env SELENIUM_HUB=172.18.0.1 --name container-test aseema31/infoloblabs:latest || error=true
               docker cp container-test:/usr/share/tag/test-output/ .
-              docker cp container-test:/Test_Execution_Report.html .
+              docker cp container-test:/src/resources/Test_Execution_Report.html .
               docker cp container-test:/screenshots/ .
               docker rm -f container-test
               if [ $error ]
