@@ -1,5 +1,6 @@
 package test.java.com.peoplesoft.container.test;
 
+import java.io.File;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -124,6 +125,11 @@ public class PeopleSoftTest {
 		{
 			CaptureScreenshotOnFailedTest captureScreenshotOnFailedTest  = new CaptureScreenshotOnFailedTest(driver  );
 			captureScreenshotOnFailedTest.captureScreenshotOnFailure(result);
+		}
+		else
+		{
+			String directory = "screenshots";
+			new File(directory).mkdirs(); // Insure directory is there
 		}
 		extent.endTest(test);
 
