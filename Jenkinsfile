@@ -45,6 +45,7 @@ pipeline {
           steps {
             script {
               docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                  sh 'docker login'
                   sh 'docker push aseema31/infoloblabs:latest'
               }
             }
