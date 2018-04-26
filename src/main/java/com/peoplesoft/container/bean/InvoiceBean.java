@@ -20,7 +20,7 @@ public class InvoiceBean {
  {
 	 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		LocalDate localDate = LocalDate.now(ZoneId.systemDefault());
-	return dtf.format(localDate); //2016/11/16
+	return ("04/25/2018"); //2016/11/16
  }
 
 public String getInvoiceNumber() {
