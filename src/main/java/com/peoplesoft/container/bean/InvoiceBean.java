@@ -1,6 +1,7 @@
 package main.java.com.peoplesoft.container.bean;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class InvoiceBean {
@@ -18,7 +19,7 @@ public class InvoiceBean {
  private String getDate()
  {
 	 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-		LocalDate localDate = LocalDate.now();
+		LocalDate localDate = LocalDate.now(ZoneId.systemDefault());
 	return dtf.format(localDate); //2016/11/16
  }
 
